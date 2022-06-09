@@ -12,7 +12,7 @@ namespace screechr.Controllers
     [ApiController]
     public class ScreechController : ControllerBase
     {
-        private readonly ILogger<UserProfileController> _logger;
+        private readonly ILogger<ScreechController> _logger;
         private readonly IUserDataRepository _userDataRepository;
 
         /// <summary>
@@ -22,7 +22,7 @@ namespace screechr.Controllers
         /// <param name="logger">Logger for diagnostics</param>
         /// <exception cref="ArgumentNullException">UserProfileDataStore or Logger is null.</exception>
         public ScreechController(IUserDataRepository userDataRepository,
-            ILogger<UserProfileController> logger)
+            ILogger<ScreechController> logger)
         {
             _userDataRepository = userDataRepository ?? 
                 throw new ArgumentNullException(nameof(userDataRepository));
