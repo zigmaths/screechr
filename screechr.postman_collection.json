@@ -1,0 +1,436 @@
+{
+	"info": {
+		"_postman_id": "1ec0ccd1-d04a-4f0f-8739-8592f4348190",
+		"name": "screechr",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21312164"
+	},
+	"item": [
+		{
+			"name": "GET User Profiles",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImN0eSI6IkpXVCJ9.eyJzdWIiOiIxIiwiZ2l2ZW5fbmFtZSI6IkFuYWtpbiIsImZhbWlseV9uYW1lIjoiU2t5d2Fsa2VyIiwiZGF0ZWNyZWF0ZWQiOiIyMDIyLTA2LTA5VDAyOjQ2OjQ5LjQ1MzIwNDNaIiwibmJmIjoxNjU0NzQyOTI3LCJleHAiOjE2NTQ3NDY1MjcsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjcxMTkiLCJhdWQiOiJzY3JlZWNoYXBpIn0.PdliLZqj0GAIrCMvR7izMTVtQ8N1qq7Gq_OuxQKQx4U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:{{portNumber}}/api/userprofiles",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{portNumber}}",
+					"path": [
+						"api",
+						"userprofiles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET User Profile",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"accept": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImN0eSI6IkpXVCJ9.eyJzdWIiOiIxIiwiZ2l2ZW5fbmFtZSI6IkFuYWtpbiIsImZhbWlseV9uYW1lIjoiU2t5d2Fsa2VyIiwiZGF0ZWNyZWF0ZWQiOiIyMDIyLTA2LTA5VDAzOjAxOjI1Ljk2Mjk1NDVaIiwibmJmIjoxNjU0NzQzNzM1LCJleHAiOjE2NTQ3NDczMzUsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjcxMTkiLCJhdWQiOiJzY3JlZWNoYXBpIn0.4hykxND_bJZ29N3RDbo5yX1Rlfj69JUQRBJAAwIF6E0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:{{portNumber}}/api/userprofiles/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{portNumber}}",
+					"path": [
+						"api",
+						"userprofiles",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST User Profile",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"checo\",\r\n    \"password\": \"Password5\",\r\n    \"firstName\": \"Sergio\",\r\n    \"lastName\": \"Perez\",\r\n    \"profileImage\": \"https://www.thedrive.com/uploads/2022/05/31/Sergio-Perez-Red-Bull-2022-Monaco-Grand-Prix.jpg?auto=webp&auto=webp&optimize=high&quality=70&width=1920\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:{{portNumber}}/api/userprofiles",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{portNumber}}",
+					"path": [
+						"api",
+						"userprofiles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT User Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImN0eSI6IkpXVCJ9.eyJzdWIiOiIxIiwiZ2l2ZW5fbmFtZSI6IkFuYWtpbiIsImZhbWlseV9uYW1lIjoiU2t5d2Fsa2VyIiwiZGF0ZWNyZWF0ZWQiOiIyMDIyLTA2LTA5VDAzOjAxOjI1Ljk2Mjk1NDVaIiwibmJmIjoxNjU0NzQzNzM1LCJleHAiOjE2NTQ3NDczMzUsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjcxMTkiLCJhdWQiOiJzY3JlZWNoYXBpIn0.4hykxND_bJZ29N3RDbo5yX1Rlfj69JUQRBJAAwIF6E0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"darkside\",\n    \"password\": \"sithlord\",\n    \"firstname\": \"Darth\",\n    \"lastname\": \"Vader\",\n    \"profileimage\": \"http://www.myspace.com/5674890\"\n}"
+				},
+				"url": {
+					"raw": "https://localhost:{{portNumber}}/api/userprofiles/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{portNumber}}",
+					"path": [
+						"api",
+						"userprofiles",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH User Profile",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImN0eSI6IkpXVCJ9.eyJzdWIiOiIxIiwiZ2l2ZW5fbmFtZSI6IkFuYWtpbiIsImZhbWlseV9uYW1lIjoiU2t5d2Fsa2VyIiwiZGF0ZWNyZWF0ZWQiOiIyMDIyLTA2LTA5VDAyOjQ2OjQ5LjQ1MzIwNDNaIiwibmJmIjoxNjU0NzQyOTI3LCJleHAiOjE2NTQ3NDY1MjcsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjcxMTkiLCJhdWQiOiJzY3JlZWNoYXBpIn0.PdliLZqj0GAIrCMvR7izMTVtQ8N1qq7Gq_OuxQKQx4U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n      \"op\": \"replace\",\n      \"path\": \"/profileimage\",\n      \"value\": \"http://www.facebook.com/1045678\"\n    }\n]"
+				},
+				"url": {
+					"raw": "https://localhost:{{portNumber}}/api/userprofiles/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{portNumber}}",
+					"path": [
+						"api",
+						"userprofiles",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Screeches",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:{{portNumber}}/api/screeches",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{portNumber}}",
+					"path": [
+						"api",
+						"screeches"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Screech",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImN0eSI6IkpXVCJ9.eyJzdWIiOiIxIiwiZ2l2ZW5fbmFtZSI6IkFuYWtpbiIsImZhbWlseV9uYW1lIjoiU2t5d2Fsa2VyIiwiZGF0ZWNyZWF0ZWQiOiIyMDIyLTA2LTA5VDAzOjAxOjI1Ljk2Mjk1NDVaIiwibmJmIjoxNjU0NzQzNzM1LCJleHAiOjE2NTQ3NDczMzUsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjcxMTkiLCJhdWQiOiJzY3JlZWNoYXBpIn0.4hykxND_bJZ29N3RDbo5yX1Rlfj69JUQRBJAAwIF6E0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:{{portNumber}}/api/screeches/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{portNumber}}",
+					"path": [
+						"api",
+						"screeches",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Screech",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImN0eSI6IkpXVCJ9.eyJzdWIiOiIxIiwiZ2l2ZW5fbmFtZSI6IkFuYWtpbiIsImZhbWlseV9uYW1lIjoiU2t5d2Fsa2VyIiwiZGF0ZWNyZWF0ZWQiOiIyMDIyLTA2LTA5VDAzOjAxOjI1Ljk2Mjk1NDVaIiwibmJmIjoxNjU0NzQzNzM1LCJleHAiOjE2NTQ3NDczMzUsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjcxMTkiLCJhdWQiOiJzY3JlZWNoYXBpIn0.4hykxND_bJZ29N3RDbo5yX1Rlfj69JUQRBJAAwIF6E0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"content\": \"This is now Darth Vader's screech.\"\n}"
+				},
+				"url": {
+					"raw": "https://localhost:{{portNumber}}/api/screeches/1/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{portNumber}}",
+					"path": [
+						"api",
+						"screeches",
+						"1",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Screech",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImN0eSI6IkpXVCJ9.eyJzdWIiOiIxIiwiZ2l2ZW5fbmFtZSI6IkFuYWtpbiIsImZhbWlseV9uYW1lIjoiU2t5d2Fsa2VyIiwiZGF0ZWNyZWF0ZWQiOiIyMDIyLTA2LTA5VDAzOjI5OjI0LjgxMTcwODRaIiwibmJmIjoxNjU0NzQ1Mzg3LCJleHAiOjE2NTQ3NDg5ODcsImlzcyI6Imh0dHBzOi8vbG9jYWxob3N0OjcxMTkiLCJhdWQiOiJzY3JlZWNoYXBpIn0.wPNiqaEON64kuu1YvhzoIHqpbEJOcKkyOD8aWHmBRJc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\": \"This is Anakin's third screech.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:{{portNumber}}/api/screeches/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{portNumber}}",
+					"path": [
+						"api",
+						"screeches",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Authentication - Unauthorized",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"userdoesnotexist\",\r\n    \"password\": \"invalidpassword\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:{{portNumber}}/api/authentication/authenticate",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{portNumber}}",
+					"path": [
+						"api",
+						"authentication",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Authentication - Authorized",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"iamyourfather\",\r\n    \"password\": \"Password1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:{{portNumber}}/api/authentication/authenticate",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{portNumber}}",
+					"path": [
+						"api",
+						"authentication",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Authentication - Authorized Checo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"checo\",\r\n    \"password\": \"Password5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:{{portNumber}}/api/authentication/authenticate",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "{{portNumber}}",
+					"path": [
+						"api",
+						"authentication",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
