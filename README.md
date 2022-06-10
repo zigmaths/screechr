@@ -4,6 +4,7 @@
 1. Clone the screechr project from the following GitHub repo: https://github.com/zigmaths/screechr
 2. From the command line, navigate to ...\repos\screechr\screechr and execute the following command: dotnet run
 3. Collection of Postman requests are provided to facilitate testing of the Web API. Please see screechr.postman_collection JSON file in the GitHub repo, and import into Postman (optional).
+
 **IMPORTANT**: Click "Disable SSL Verification" in Postman before sending any requests.
 
 Port number: 7119 (as configured in the launchSettings.json file in the screechr Properties directory).
@@ -37,7 +38,7 @@ Port number: 7119 (as configured in the launchSettings.json file in the screechr
     - Create new screech -> Post
     - Update screech content -> Put
     
-**Third Party Packages:**
+**Dependencies:**
   - Automapper.Extensions.Microsoft.DependencyInjection
   - FakeItEasy
 
